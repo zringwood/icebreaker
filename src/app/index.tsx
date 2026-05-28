@@ -1,5 +1,5 @@
 import * as Device from 'expo-device';
-import { Platform, StyleSheet } from 'react-native';
+import { Button, Platform, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
@@ -30,7 +30,9 @@ export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
-       
+        <View style={styles.heroSection}>
+                 <Button title="Go Visible" />
+          </View>
 
         {Platform.OS === 'web' && <WebBadge />}
       </SafeAreaView>
@@ -47,24 +49,23 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     paddingHorizontal: Spacing.four,
+    
     alignItems: 'center',
     gap: Spacing.three,
     paddingBottom: BottomTabInset + Spacing.three,
     maxWidth: MaxContentWidth,
   },
   heroSection: {
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
     paddingHorizontal: Spacing.four,
     gap: Spacing.four,
   },
-  title: {
-    textAlign: 'center',
-  },
-  code: {
-    textTransform: 'uppercase',
-  },
+ button:{
+  borderRadius:'15px',
+ },
   stepContainer: {
     gap: Spacing.three,
     alignSelf: 'stretch',
