@@ -31,7 +31,9 @@ export default function HomeScreen() {
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.heroSection}>
+          <ThemedText type="title">Icebreaker</ThemedText>
                  <Button title="Go Visible" />
+                 <ThemedText type="small">There are 20 users around you</ThemedText>
           </View>
 
         {Platform.OS === 'web' && <WebBadge />}
