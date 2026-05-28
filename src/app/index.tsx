@@ -34,6 +34,8 @@ export default function HomeScreen() {
           <ThemedText type="title">Icebreaker</ThemedText>
                  <Button title="Go Visible" />
                  <ThemedText type="small">There are 20 users around you</ThemedText>
+          
+          
           </View>
 
         {Platform.OS === 'web' && <WebBadge />}
